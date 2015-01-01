@@ -89,9 +89,10 @@ greedy(Goal) -->
 %% greedy(:Dcg,Matches:list)//
 %
 %  Like generous//2 but consumes as many matches as possible.
+%  Gives back matches on backtracking.
 :- meta_predicate greedy(3,-,*,*).
 greedy(Goal,[X|Xs]) -->
-    ( call(Goal,X) -> [] ),
+    call(Goal,X),
     greedy(Goal,Xs).
 greedy(_,[]) -->
     [].

@@ -1,8 +1,10 @@
 :- use_module(library(dcg_util)).
 
-% define helper predicates here
+ho(ho) -->
+    "ho".
 
 :- use_module(library(tap)).
 
-% add tests showing common usage
-todo :- fail.
+synopsis :-
+    Text = `hohoho`,
+    phrase(exactly(3,ho),Text).

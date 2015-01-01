@@ -1,9 +1,12 @@
 # Synopsis
 
+    ```prolog
     :- use_module(library(dcg_util)).
-    main :-
-        % give one motivating example
-        true.
+    ho(ho) --> "ho".
+
+    ?- phrase(exactly(3,ho,Matches),`hohoho`).
+    Matches = [ho, ho, ho].
+    ```
 
 # Description
 

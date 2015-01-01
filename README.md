@@ -1,12 +1,19 @@
 # Synopsis
 
-    ```prolog
-    :- use_module(library(dcg_util)).
-    ho(ho) --> "ho".
+```prolog
+:- use_module(library(dcg_util)).
+ho(ho) --> "ho".
+comma --> ", ".
 
-    ?- phrase(exactly(3,ho,Matches),`hohoho`).
-    Matches = [ho, ho, ho].
-    ```
+?- phrase(exactly(3,ho,Matches),`hohoho`).
+Matches = [ho, ho, ho].
+
+?- phrase(list(ho,comma,Santa),`ho, ho, ho`).
+Santa = [ho, ho, ho].
+
+?- phrase(list(ho,comma,[ho,ho,ho]),Text).
+Text = `ho, ho, ho`.
+```
 
 # Description
 

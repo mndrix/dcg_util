@@ -109,7 +109,6 @@ greedy(_,[]) -->
 list(ElemDCG, SepDCG, [Elem|Tail]) -->
     call(ElemDCG, Elem),
     ( call(SepDCG),
-      !,
       list(ElemDCG, SepDCG, Tail)
     ; "",
       { Tail = [] }

@@ -1,4 +1,3 @@
-# v0.0.1 (YYYY-MM-DD)
+# v0.3.0 (2015-01-01)
 
-  * Describe first change
-  * Describe another change
+  * First public release

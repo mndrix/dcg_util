@@ -56,7 +56,8 @@ exactly(N,Goal) -->
 %  representation of what Dcg parsed.
 :- meta_predicate exactly(+,3,?,*,*).
 exactly(0,Goal,[]) -->
-    \+ call(Goal,_).
+    ( parsing -> \+ call(Goal,_); [] ),
+    !.
 exactly(N0,Goal,[X|Xs]) -->
     { N0 #> 0 },
     { N #= N0 - 1 },

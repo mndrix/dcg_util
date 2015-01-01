@@ -7,4 +7,4 @@ download('https://github.com/mndrix/dcg_util/archive/v0.3.1.zip').
 author('Michael Hendricks','michael@ndrix.org').
 packager('Michael Hendricks','michael@ndrix.org').
 maintainer('Michael Hendricks','michael@ndrix.org').
-home('http://github.com/mndrix/dcg_util').
+home('https://github.com/mndrix/dcg_util').

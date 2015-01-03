@@ -105,6 +105,9 @@ greedy(_,[]) -->
 %  The set of patterns matched by ElemDcg and SeparatorDcg
 %  should be disjoint.  ElemDcg is called with one extra argument.
 %  SeparatorDcg is called without any extra arguments.
+%
+%  On backtracking, gives back elements and their associated separators.
+%  Always matches at least one element (without a trailing separator).
 :- meta_predicate list(3,2,?,?,?).
 list(ElemDCG, SepDCG, [Elem|Tail]) -->
     call(ElemDCG, Elem),

@@ -4,8 +4,8 @@
 % "hello","two words"
 comma --> ",".
 quote --> "\"".
-any(C) --> [C].
-column(W) --> quote, generous(any,W), quote.
+non_quote(C) --> [C], { C \= 0'" }. % '
+column(W) --> quote, generous(non_quote,W), quote, !.
 
 :- use_module(library(tap)).
 
